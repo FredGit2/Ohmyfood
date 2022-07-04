@@ -1,0 +1,28 @@
+input.btn {
+    background:linear-gradient(300deg, $color-primary,$color-secondary);
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+
+}
+
+.searchlocation {
+
+    display: flex;
+    width: 100%;
+    background-color:$background-color;
+    justify-content:center;
+    
+
+}
+.searchlocation input{
+    background-color:$background-color ;
+    border: none;
+    
+}
+
+
+header {
+   text-align: center;
+}
