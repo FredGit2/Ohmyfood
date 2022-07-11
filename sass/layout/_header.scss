@@ -7,10 +7,19 @@
 
 header {
     text-align: center;
+    h2{ margin-top: 0;
+        padding-top: 30px;
+    font-size: 30px;}
 }
 
 .description {
     background-color: $background-color;
     padding-bottom: 50px;
     width: 100%;
+}
+//header des menus//
+.background-picture{
+   object-fit: cover;
+    width:100vw;
+    height:30vh;
 }
