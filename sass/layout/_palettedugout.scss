@@ -1,0 +1,86 @@
+body.background-picture {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+}
+
+.menus {
+z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color ;
+    border-radius: 25px 25px 0 0;
+    margin-top: -30px;
+    padding-bottom: 20px;
+    
+
+
+
+    h1 {
+        
+        font-family: 'Shrikhand', cursive;
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 30px 0 0 20px;
+    }
+}
+
+.menus--title {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 10px 20px;
+
+    i {
+        padding-left: 30px;
+        font-size: 22px;
+    }
+}
+
+.menus__bloc {
+    border-radius: 10px;
+    margin: 20px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0px 1px 1px lightgray;
+
+}
+
+h6 {
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+
+}
+
+.menus__bloc--price {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 20px 20px 10px;
+
+    p {
+        padding-right: 20px;
+        font-size: 13px;
+        margin: 0;
+    }
+
+}
+
+p.menus__bloc--description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+}
+
+.menus .btn{
+    align-self: center;
+}
+h4{
+margin-top: 0;
+}
