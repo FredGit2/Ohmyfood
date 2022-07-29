@@ -4,7 +4,4 @@ $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $background-color: #f6f6f6;
 
-//mixin//
-@mixin box-shadow($colour: $background-color){
-    box-shadow: 0px 3px 3px rgb(185, 178, 178);
-    }
+

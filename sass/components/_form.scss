@@ -33,11 +33,20 @@
     padding: 15px;
     font-size: 18px;
     margin: 10px;
+    &:hover{
+       @include scale;
+    }
 }
 
+
+
 // bouton fonctionnement //
- h2 {
+h2 {
     padding-left: 20px;
+}
+
+.functioning {
+    padding: 30px 10px;
 }
 
 .steps-fonctioning {
@@ -82,69 +91,147 @@ span {
     border-radius: 25px;
     text-align: center;
 }
-// cards restaurants//
 
-.one-card-resto{
+// cards restaurants//
+.card-resto {
+    background-color: $background-color;
+
+    h2 {
+        padding-top: 50px;
+    }
+}
+
+.one-card-resto {
     margin: 20px;
-    height: 240px;
+    height: 280px;
     width: 90%;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     @include box-shadow;
+    position: relative;
     cursor: pointer;
-    a
-    {text-decoration: none;
-        color:black;
+    &:hover{
+        @include scale;
     }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
 }
-.one-card-resto__image{
+
+.new::before {
+    content: "Nouveau";
+    position: absolute;
+    background-color: $color-tertiary;
+    padding: 5px;
+    margin: 15px;
+    right: 10px;
+    color: darken($color: $color-tertiary, $amount: 40);
+    font-weight: bold;
+
+}
+
+.one-card-resto__image {
     display: flex;
-    border-radius:10px 10px 0 0;
-    height: 160px;
+    border-radius: 10px 10px 0 0;
+    height: 200px;
     width: 100%;
     object-fit: cover;
-   
-}
-.one-card-resto__text i{
-    float: right;
-    margin: 10px 20px;
-    font-size: 30px;
-   
-
 
 }
+
 .one-card-resto__text {
     margin-top: 15px;
-    h3{
-        margin:0;
+    position: relative;
+
+    &::before {
+        @include empty-heart;
+    }
+
+    &::after {
+        @include full-heart;
+    }
+
+    &:hover::after {
+        transition: all 0.9s ease-in-out 0.4s;
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    h3 {
+        margin: 0;
         padding-left: 10px;
     }
-    p{
-        margin:0;
+
+    p {
+        margin: 0;
         padding: 5px 0 10px 10px;
     }
 }
+
 //footer//
-footer{
-    background-color:#353535;
-    color:white;
-    i{padding:0 10px 0 30px;}
-   padding-bottom: 30px;
-    
+footer {
+    background-color: #353535;
+    color: white;
+
+    i {
+        padding: 0 10px 0 30px;
+    }
+
+    padding-bottom: 30px;
+
 }
-h4{
-    font-family : 'Shrikhand', cursive ;
+
+h4 {
+    font-family: 'Shrikhand', cursive;
     padding: 20px 0 0 30px;
     font-size: 20px;
     font-weight: 400;
 }
-.footer-links p{
-    padding:0;
-    
-}
-footer p{
-    padding-left: 30px;
-margin: 8px;
+
+.footer-links p {
+    padding: 0;
+
 }
 
+footer p {
+    padding-left: 30px;
+    margin: 8px;
+}
+//media queries //
+@media screen and (min-width: 768px) {
+    h2 {
+        text-align: center;
+    }
+
+    .steps-container {
+        display: flex;
+    }
+
+    .steps-fonctioning {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .all-restaurants {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .one-card-resto {
+        flex-basis: 44%;
+        height: 350px;
+
+        &__image {
+            height: 250px;
+        }
+    }
+
+    footer {
+        text-align: center;
+    }
+}

@@ -40,6 +40,197 @@ header h2 {
   height: 30vh;
 }
 
+body.background-picture {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+}
+
+.menus {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-radius: 25px 25px 0 0;
+  margin-top: -30px;
+  padding-bottom: 20px;
+}
+.menus h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 25px;
+}
+.menus h5 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 30px 0 0 20px;
+  border-bottom: 2px solid #99E2D0;
+  width: 45px;
+}
+
+.menus--title {
+  display: flex;
+  padding: 10px 20px;
+  position: relative;
+}
+.menus--title::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  right: 20px;
+  bottom: 17px;
+  font-size: 30px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: inherit;
+  right: 60px;
+}
+.menus--title::after {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  right: 20px;
+  bottom: 17px;
+  font-size: 30px;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  right: 60px;
+}
+.menus--title:hover::after {
+  transition: all 0.9s ease-in-out 0.4s;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.header__menus a {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  left: 40px;
+}
+
+.header__menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.menus__bloc--1,
+.menus__bloc--2,
+.menus__bloc--3 {
+  border-radius: 10px;
+  margin: 20px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0px 1px 1px lightgray;
+}
+
+h6 {
+  font-size: 16px;
+  margin: 10px 0 0 10px;
+}
+
+.menus__bloc--price {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 20px 10px;
+}
+.menus__bloc--price p {
+  padding-right: 20px;
+  font-size: 13px;
+  margin: 0;
+}
+
+p.menus__bloc--description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.menus__bloc--check {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menus .btn {
+  align-self: center;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+@-webkit-keyframes delay {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes delay {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.menus__bloc--1 {
+  -webkit-animation: delay 0.8s 0.3s backwards;
+          animation: delay 0.8s 0.3s backwards;
+}
+
+.menus__bloc--2 {
+  -webkit-animation: delay 0.8s 0.6s backwards;
+          animation: delay 0.8s 0.6s backwards;
+}
+
+.menus__bloc--3 {
+  -webkit-animation: delay 0.8s 0.9s backwards;
+          animation: delay 0.8s 0.9s backwards;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
 .searchform {
   display: flex;
   width: 100%;
@@ -72,9 +263,17 @@ header h2 {
   font-size: 18px;
   margin: 10px;
 }
+.btn--rounded:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease 0.1s;
+}
 
 h2 {
   padding-left: 20px;
+}
+
+.functioning {
+  padding: 30px 10px;
 }
 
 .steps-fonctioning {
@@ -117,38 +316,97 @@ span {
   text-align: center;
 }
 
+.card-resto {
+  background-color: #f6f6f6;
+}
+.card-resto h2 {
+  padding-top: 50px;
+}
+
 .one-card-resto {
   margin: 20px;
-  height: 240px;
+  height: 280px;
   width: 90%;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0px 3px 3px rgb(185, 178, 178);
+  position: relative;
   cursor: pointer;
+}
+.one-card-resto:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease 0.1s;
 }
 .one-card-resto a {
   text-decoration: none;
   color: black;
 }
 
+.new::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 5px;
+  margin: 15px;
+  right: 10px;
+  color: #278870;
+  font-weight: bold;
+}
+
 .one-card-resto__image {
   display: flex;
   border-radius: 10px 10px 0 0;
-  height: 160px;
+  height: 200px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.one-card-resto__text i {
-  float: right;
-  margin: 10px 20px;
-  font-size: 30px;
-}
-
 .one-card-resto__text {
   margin-top: 15px;
+  position: relative;
+}
+.one-card-resto__text::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  right: 20px;
+  bottom: 17px;
+  font-size: 30px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: inherit;
+}
+.one-card-resto__text::after {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  right: 20px;
+  bottom: 17px;
+  font-size: 30px;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+.one-card-resto__text:hover::after {
+  transition: all 0.9s ease-in-out 0.4s;
+  transform: scale(1.1);
+  opacity: 1;
 }
 .one-card-resto__text h3 {
   margin: 0;
@@ -184,79 +442,30 @@ footer p {
   margin: 8px;
 }
 
-body.background-picture {
-  position: relative;
-  z-index: -1;
-  width: 100%;
-}
-
-.menus {
-  z-index: 1;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #f6f6f6;
-  border-radius: 25px 25px 0 0;
-  margin-top: -30px;
-  padding-bottom: 20px;
-}
-.menus h1 {
-  font-family: "Shrikhand", cursive;
-  font-weight: 500;
-  font-size: 25px;
-}
-.menus h5 {
-  font-size: 18px;
-  font-weight: 400;
-  margin: 30px 0 0 20px;
-}
-
-.menus--title {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  padding: 10px 20px;
-}
-.menus--title i {
-  padding-left: 30px;
-  font-size: 22px;
-}
-
-.menus__bloc {
-  border-radius: 10px;
-  margin: 20px;
-  padding: 5px;
-  background-color: white;
-  box-shadow: 0px 1px 1px lightgray;
-}
-
-h6 {
-  font-size: 16px;
-  margin: 10px 0 0 10px;
-}
-
-.menus__bloc--price {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding: 0 20px 20px 10px;
-}
-.menus__bloc--price p {
-  padding-right: 20px;
-  font-size: 13px;
-  margin: 0;
-}
-
-p.menus__bloc--description {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  flex-wrap: nowrap;
-}
-
-.menus .btn {
-  align-self: center;
-}
-
-h4 {
-  margin-top: 0;
+@media screen and (min-width: 768px) {
+  h2 {
+    text-align: center;
+  }
+  .steps-container {
+    display: flex;
+  }
+  .steps-fonctioning {
+    padding: 0;
+    justify-content: center;
+  }
+  .all-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .one-card-resto {
+    flex-basis: 44%;
+    height: 350px;
+  }
+  .one-card-resto__image {
+    height: 250px;
+  }
+  footer {
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */

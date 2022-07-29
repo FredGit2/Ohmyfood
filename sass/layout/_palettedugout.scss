@@ -5,7 +5,7 @@ body.background-picture {
 }
 
 .menus {
-z-index: 1;
+    z-index: 1;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -13,12 +13,12 @@ z-index: 1;
     border-radius: 25px 25px 0 0;
     margin-top: -30px;
     padding-bottom: 20px;
-    
+
 
 
 
     h1 {
-        
+
         font-family: 'Shrikhand', cursive;
         font-weight: 500;
         font-size: 25px;
@@ -28,22 +28,54 @@ z-index: 1;
         font-size: 18px;
         font-weight: 400;
         margin: 30px 0 0 20px;
+        border-bottom: 2px solid $color-tertiary;
+        width: 45px;
+
     }
 }
 
 .menus--title {
     display: flex;
-    align-items: center;
-    align-content: center;
     padding: 10px 20px;
+    position: relative;
 
-    i {
-        padding-left: 30px;
-        font-size: 22px;
+    &::before {
+        @include empty-heart;
+        right: 60px;
+    }
+
+    &::after {
+        @include full-heart;
+        right: 60px;
+    }
+
+    &:hover::after {
+        transition: all 0.9s ease-in-out 0.4s;
+        transform: scale(1.1);
+        opacity: 1;
     }
 }
 
-.menus__bloc {
+.header__menus a {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 40px;
+
+
+}
+
+.header__menus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.menus__bloc--1,
+.menus__bloc--2,
+.menus__bloc--3 {
     border-radius: 10px;
     margin: 20px;
     padding: 5px;
@@ -60,7 +92,6 @@ h6 {
 
 .menus__bloc--price {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
     padding: 0 20px 20px 10px;
 
@@ -76,11 +107,50 @@ p.menus__bloc--description {
     overflow: hidden;
     text-overflow: ellipsis;
     flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
-.menus .btn{
+.menus__bloc--check{
+    display: flex;
+    justify-content: space-between;
+}
+.menus .btn {
     align-self: center;
 }
-h4{
-margin-top: 0;
+
+h4 {
+    margin-top: 0;
 }
+
+@keyframes delay {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.menus__bloc--1 {
+    animation: delay 0.8s 0.3s backwards;
+}
+
+.menus__bloc--2 {
+    animation: delay 0.8s 0.6s backwards;
+}
+
+.menus__bloc--3 {
+    animation: delay 0.8s 0.9s backwards;
+}
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50px);
+    }
+}
+
