@@ -48,3 +48,10 @@
     transform:scale(1.02);
     transition:all 0.2s ease ;
 }
+@mixin heart{
+    font-weight: bold;
+    border: transparent;
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

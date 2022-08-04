@@ -1,59 +1,8 @@
+// header + image de fond//
 body.background-picture {
     position: relative;
     z-index: -1;
     width: 100%;
-}
-
-.menus {
-    z-index: 1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: $background-color ;
-    border-radius: 25px 25px 0 0;
-    margin-top: -30px;
-    padding-bottom: 20px;
-
-
-
-
-    h1 {
-
-        font-family: 'Shrikhand', cursive;
-        font-weight: 500;
-        font-size: 25px;
-    }
-
-    h5 {
-        font-size: 18px;
-        font-weight: 400;
-        margin: 30px 0 0 20px;
-        border-bottom: 2px solid $color-tertiary;
-        width: 45px;
-
-    }
-}
-
-.menus--title {
-    display: flex;
-    padding: 10px 20px;
-    position: relative;
-
-    &::before {
-        @include empty-heart;
-        right: 60px;
-    }
-
-    &::after {
-        @include full-heart;
-        right: 60px;
-    }
-
-    &:hover::after {
-        transition: all 0.9s ease-in-out 0.4s;
-        transform: scale(1.1);
-        opacity: 1;
-    }
 }
 
 .header__menus a {
@@ -73,54 +22,192 @@ body.background-picture {
 
 }
 
+// titre + coeur //
+.menus--title {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+   
+}
+
+.far {
+    font-size: 30px;
+    padding-right:20px;
+}
+
+.far:hover {
+    animation: heart 1.2s ease-in-out;
+    @include heart;
+}
+
+@keyframes heart {
+    0% {
+
+        opacity: 0;
+    }
+
+    100% {
+
+        opacity: 1;
+    }
+}
+
+// presentations menus //
+.menus {
+    z-index: 1;
+    position: relative;
+   
+    background-color: $background-color ;
+    border-radius: 25px 25px 0 0;
+    margin-top: -30px;
+    padding-bottom: 20px;
+
+    h1 {
+
+        font-family: 'Shrikhand', cursive;
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 30px 0 0 20px;
+        border-bottom: 2px solid $color-tertiary;
+        width: 45px;
+
+    }
+}
+
 .menus__bloc--1,
 .menus__bloc--2,
-.menus__bloc--3 {
+.menus__bloc--3,
+.menus__bloc--4 {
     border-radius: 10px;
     margin: 20px;
-    padding: 5px;
     background-color: white;
     box-shadow: 0px 1px 1px lightgray;
+
 
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 18px;
     margin: 10px 0 0 10px;
+    padding: 10px 0 0 10px;
 
 }
 
-.menus__bloc--price {
+// animation coche verte check//
+.menus__description {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px 20px 10px;
-
-    p {
-        padding-right: 20px;
-        font-size: 13px;
-        margin: 0;
-    }
 
 }
 
-p.menus__bloc--description {
+.menus__description__items {
+    overflow: hidden;
+
+}
+
+.menus__hover {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.menus__price {
+    margin-right: 20px;
+    display: flex;
+    align-self: end;
+    font-weight: bold;
+}
+
+.menus__description__items--light,
+h6 {
+    margin: 0;
+    flex-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    flex-wrap: nowrap;
     white-space: nowrap;
 }
 
-.menus__bloc--check{
-    display: flex;
-    justify-content: space-between;
+.menus__description__items--light {
+    padding: 10px;
+    font-size: 14px;
 }
+
+.menus__bloc--1,
+.menus__bloc--2,
+.menus__bloc--3,
+.menus__bloc--4 {
+    .hover {
+        width: 50px;
+        height: 70px;
+        border-radius: 0px 10px 10px 0px;
+        background-color: $color-tertiary;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        animation: 0.6s ease-in-out slidein;
+        color: white;
+        font-size: 25px;
+
+        &i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &:hover {
+        .hover {
+            width: 50px;
+            height: 70px;
+            border-radius: 0px 10px 10px 0px;
+            background-color: $color-tertiary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: 100% 50%;
+        }
+
+        .hover2 {
+            animation: 800ms rotate 200ms;
+        }
+    }
+}
+
+@keyframes slidein {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .menus .btn {
-    align-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 h4 {
     margin-top: 0;
 }
+
+// animation menus//
 
 @keyframes delay {
     0% {
@@ -145,12 +232,18 @@ h4 {
 .menus__bloc--3 {
     animation: delay 0.8s 0.9s backwards;
 }
-@keyframes slide-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50px);
-    }
+.menus__bloc--4{
+    animation: delay 0.8s 1.2s backwards;
 }
+@media screen and (min-width: 1024px) {
 
+.menus__starter,
+.menus__main-course,
+.menus__desserts{
+    width: 33%;
+}
+.menus__container{
+    display:flex;
+    justify-content: center;
+}
+}
