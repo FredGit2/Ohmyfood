@@ -1,0 +1,30 @@
+//footer//
+footer {
+    background-color:$color-footer;
+    color: white;
+
+    i {
+        padding: 0 10px 0 30px;
+    }
+
+    padding-bottom: 30px;
+
+}
+
+.footer-links p {
+    padding: 0;
+
+}
+
+footer p
+{
+    padding-left: 30px;
+    margin: 8px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+    margin: 8px;
+}

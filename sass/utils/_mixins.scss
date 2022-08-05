@@ -5,53 +5,16 @@
 }
 
 //heart//
-
-@mixin empty-heart {
-    position: absolute;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-    content: "\f004";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    right: 20px;
-    bottom: 17px;
-    font-size: 30px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: inherit;
-}
-
-@mixin full-heart {
-    position: absolute;
-    font-family: "Font Awesome 5 Free";
-    font-weight: bold;
-    content: "\f004";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    right: 20px;
-    bottom: 17px;
-    font-size: 30px;
-    opacity: 0;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-
-}
-@mixin scale{
-    transform:scale(1.02);
-    transition:all 0.2s ease ;
-}
 @mixin heart{
     font-weight: bold;
     border: transparent;
     background: -webkit-linear-gradient($color-primary, $color-secondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+//scale//
+@mixin scale{
+    transform:scale(1.02);
+    transition:all 0.2s ease ;
 }

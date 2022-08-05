@@ -1,3 +1,4 @@
+// header accueil//
 .logo{
     height: 30px;
     margin: 20px;
@@ -7,9 +8,6 @@
 
 header {
     text-align: center;
-    h2{ margin-top: 0;
-        padding-top: 30px;
-    font-size: 30px;}
 }
 
 .description {
@@ -22,4 +20,27 @@ header {
    object-fit: cover;
     width:100vw;
     height:30vh;
+}
+
+body.background-picture {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+}
+
+.header__menus a {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 40px;
+
+
+}
+
+.header__menus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
 }

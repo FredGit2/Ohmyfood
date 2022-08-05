@@ -1,7 +1,10 @@
 @import "./utils/variables";
 @import"./utils/mixins";
+@import"./utils/keyframes";
 @import"./base/typography";
 @import"./layout/header";
-@import"./layout/palettedugout";
+@import"./layout/pagemenus";
+@import"./layout/pageaccueil";
+@import"./layout/footer";
 @import"./components/form";
 

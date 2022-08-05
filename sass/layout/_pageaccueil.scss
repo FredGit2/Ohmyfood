@@ -1,0 +1,83 @@
+// cards restaurants//
+.card-resto {
+    background-color: $background-color;
+}
+
+.one-card-resto {
+    margin: 20px;
+    height: 280px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    @include box-shadow;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        @include scale;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+}
+.one-card-resto__image {
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.one-card-resto__text {
+    margin-top: 15px;
+
+    p {
+        margin: 0;
+        padding: 5px 0 10px 10px;
+    }
+}
+.one-card-resto__text--heart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+//media queries //
+@media screen and (min-width: 768px) {
+    h2 {
+        text-align: center;
+    }
+
+    .steps-container {
+        display: flex;
+    }
+
+    .steps-fonctioning {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .all-restaurants {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .one-card-resto {
+        flex-basis: 44%;
+        height: 350px;
+
+        &__image {
+            height: 250px;
+        }
+    }
+
+    footer {
+        text-align: center;
+    }
+}

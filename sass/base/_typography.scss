@@ -1,21 +1,55 @@
-
 //*** fonts ***/
 body,
 html {
     font-family: 'Roboto', sans-serif;
 }
 
-// titre font-family: 'Shrikhand', sans-serif; //
+//page //
 
-
-body{
-    padding:0;
-    margin:0;
+body {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-h1{
-    margin:0;
-    
+
+h1 {
+    margin: 0;
+    font-family: 'Shrikhand', cursive;
+    font-weight: 500;
+    font-size: 25px;
 }
 
+h2 {
+    margin-top: 0;
+    padding: 30px 0 0 20px;
+    font-size: 30px;
+}
+h3 {
+    margin: 0;
+    padding-left: 10px;
+}
+h5 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 30px 0 0 20px;
+    border-bottom: 2px solid $color-tertiary;
+    width: 45px;
+
+}
+
+h6 {
+    font-size: 18px;
+    margin: 10px 0 0 10px;
+    padding: 10px 0 0 10px;
+
+}
+
+//footer//
+h4 {
+    font-family: 'Shrikhand', cursive;
+    margin-top: 0;
+    padding: 20px 0 0 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
