@@ -6,15 +6,36 @@
 
 //heart//
 @mixin heart{
-    font-weight: bold;
+   
     border: transparent;
     background: -webkit-linear-gradient($color-primary, $color-secondary);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    
 }
 
 //scale//
 @mixin scale{
     transform:scale(1.02);
     transition:all 0.2s ease ;
+}
+
+@mixin transition{
+    .menus__bloc--1 {
+        animation: delay 0.8s 0.2s backwards;
+    }
+    
+    .menus__bloc--2 {
+        animation: delay 0.8s 0.4s backwards;
+    }
+    
+    .menus__bloc--3 {
+        animation: delay 0.8s 0.6s backwards;
+    }
+    
+    .menus__bloc--4 {
+        animation: delay 0.8s 0.8s backwards;
+    }
 }
