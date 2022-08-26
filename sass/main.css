@@ -194,7 +194,7 @@ header {
 .background-picture {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100vw;
+  width: 100%;
   height: 30vh;
 }
 
@@ -237,6 +237,7 @@ body.background-picture {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .menus__description__items {
